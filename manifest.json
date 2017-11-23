@@ -1,0 +1,26 @@
+{
+
+  "manifest_version": 2,
+  "name": "TabControl",
+  "version": "0.1",
+
+  "description": "Control Tab open/close behavior",
+
+  "icons": {
+    "48": "icons/border-48.png"
+  },
+  
+  "permissions": [
+    "storage",
+    "activeTab",
+    "tabs"
+  ],
+  
+  "omnibox": {
+    "keyword": "mdn"
+  },
+  
+  "background": {
+    "scripts": ["js/background-script.js"]
+  }
+}
