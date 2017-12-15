@@ -7,7 +7,7 @@ var leftID;
 const TabControl = {
 	async init () {
 		browser.tabs.onRemoved.addListener(this.tabs_OnRemoved.bind(this))
-		browser.tabs.onHighlighted.addListener(this.tabs_onHighlighted.bind(this))
+		browser.tabs.onActivated.addListener(this.tabs_onActivated.bind(this))
 		browser.tabs.onMoved.addListener(this.tabs_onMoved.bind(this))
 		browser.tabs.onCreated.addListener(this.tabs_onCreated.bind(this))
 
@@ -31,11 +31,10 @@ const TabControl = {
 	log_highlight(tabInfo) {
 		highlightIndex = tabInfo.index
 		highlightID = tabInfo.id
-		//console.dir(this)
 		this.update_leftID()
 	},
-	tabs_onHighlighted(highlightInfo) {
-		browser.tabs.get(highlightInfo.tabIds[0]).then(this.log_highlight.bind(this))
+	tabs_onActivated(activeInfo) {
+		browser.tabs.get(activeInfo.tabId).then(this.log_highlight.bind(this))
 	},
 	tabs_OnRemoved(tabId, removeInfo) {
 		if(highlightID == tabId) {
@@ -55,5 +54,3 @@ const TabControl = {
 }
 
 TabControl.init()
-
-
