@@ -2,16 +2,23 @@
 
   "manifest_version": 2,
   "name": "TabControl",
-  "version": "0.2",
+  "version": "0.3",
 
   "description": "Change Tab open/close behavior",
   
+  "applications": {
+    "gecko": {
+      "id": "TabControl@me"
+    }
+  },
+
   "options_ui": {
     "page": "html/options.html",
     "browser_style": true
   },
   
   "permissions": [
+    "<all_urls>",
     "storage",
     "activeTab",
     "tabs"
