@@ -1,0 +1,24 @@
+/*
+ * Do not remove the @namespace line -- it's required for correct functioning
+ */
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"); /* set default namespace to XUL */
+
+/*
+.tab-close-button:not([pinned="true"]) { display: -moz-box !important; }
+*/
+
+/*******************************************/
+/* unloaded/pending tab ********************/
+
+#TabsToolbar #tabbrowser-tabs .tabbrowser-tab[pending] .tab-content {
+  /*background: linear-gradient(to bottom,#ffa3a3 ,#000000) !important;*/
+  color: #ff4c4c  
+}
+
+/*******************************************/
+/* unread tab ******************************/
+
+#TabsToolbar #tabbrowser-tabs .tabbrowser-tab[unread] .tab-content {
+  /*background: linear-gradient(to bottom,#ffa3a3 ,#000000) !important;*/
+  color: #ff4c4c  
+}
