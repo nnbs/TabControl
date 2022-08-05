@@ -27,4 +27,6 @@ jobs:
 
       - name: Package 
         run: zip -r -FS ../TabControl.zip * --exclude '*.git*' .
-      
+        with:
+          context: .
+          push: true
