@@ -26,9 +26,10 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
 
-      - name: Package 
-        run: zip -r -FS TabControl.zip * --exclude '*.git*' .        
+      #- name: Package 
+      #  run: zip -r -FS TabControl.zip * --exclude '*.git*' .        
+      
       - uses: actions/upload-artifact@v3
         with:
          name: TabControl
-         path: TabControl.zip
+         path: .
